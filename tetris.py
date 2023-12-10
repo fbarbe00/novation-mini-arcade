@@ -24,9 +24,9 @@ class Tetris(LaunchGame):
 
     def reset(self):
         super().reset()
+        self.fallen_blocks = np.zeros((8, 8), dtype=object)
         self.new_block()
         self.timer = 0
-        self.fallen_blocks = np.zeros((8, 8), dtype=object)
         self.level = 1
         self.blocks_passed = 0
 
