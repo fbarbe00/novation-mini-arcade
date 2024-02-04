@@ -116,14 +116,12 @@ class Pong(LaunchGame):
                     self.paint_win_point(self.ball[0], self.ball[1])
                     self.increase_score(1, 1)
                     self.new_ball()
-                    self.ball_dir = [random.choice([-1, 1]), random.choice([-1, 1])]
                     self.elapsed_time = 0
                 elif self.ball[1] >= 8:
                     logging.info("Player 1 scored!")
                     self.paint_win_point(self.ball[0], self.ball[1])
                     self.increase_score(1, 0)
-                    self.ball = [random.randint(3, 4), random.randint(4, 5)]
-                    self.ball_dir = [random.choice([-1, 1]), random.choice([-1, 1])]
+                    self.new_ball()
                     self.elapsed_time = 0
                 elif random.randint(0, 1000) == 0:
                     self.ball_dir[0] += random.choice([-1, 1])

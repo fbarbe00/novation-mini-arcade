@@ -1,3 +1,2 @@
-logging
 numpy
 novation_launchpad
